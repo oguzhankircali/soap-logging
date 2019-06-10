@@ -1,5 +1,4 @@
-﻿using SoapLogging.CalculatorServiceRef;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +12,7 @@ namespace SoapLogging.Controllers
         public ContentResult Index()
         {
             //You can catch this client behaviors (outgoing/incoming xml) in SoapBehavior.cs
-            var client = new CalculatorSoapClient();
+            var client = new CalculatorServiceRef.CalculatorSoapClient();
             int a = 6;
             int b = 3;
             var result = client.Add(a, b);
