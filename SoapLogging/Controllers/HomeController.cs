@@ -12,11 +12,13 @@ namespace SoapLogging.Controllers
         // GET: Home
         public ContentResult Index()
         {
-            //Web servisi çağrısı yaparak gönderilen ve alınan verilerin loglamasını görebiliriz.
+            //You can catch this client behaviors (outgoing/incoming xml) in SoapBehavior.cs
             var client = new CalculatorSoapClient();
-            var result = client.Add(6, 3);
+            int a = 6;
+            int b = 3;
+            var result = client.Add(a, b);
 
-            return Content(result.ToString());
+            return Content($"{a}+{b}={result.ToString()} (Result come from Soap service.)");
         }
     }
 }
