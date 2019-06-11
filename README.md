@@ -1,2 +1,2 @@
-# soap-logging
-Just one class to log all SOAP services
+# SOAP Services Logging with One Class
+You can log outgoing and incoming XML data of your SOAP services with just one class. You can see it in SoapBehavior.cs file. 
